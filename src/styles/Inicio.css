@@ -1,0 +1,14 @@
+.inicio {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .inicio a {
+    color: #3498db;
+    text-decoration: underline;
+  }
+  
+  .inicio a:hover {
+    color: #2980b9;
+  }
+  
