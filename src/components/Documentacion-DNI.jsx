@@ -5,6 +5,7 @@ export default function ApiDocumentation() {
       {/* Sidebar */}
       <nav className="sidebar">
         <div className="sidebar-content">
+          <br /><br /><br />
           <div className="logo">DOCUMENTACION</div>
           <ul className="nav-list">
             <li>INICIO</li>
@@ -27,6 +28,7 @@ export default function ApiDocumentation() {
 
       {/* Main Content */}
       <main className="main-content">
+        <br />
         <h1>Consulta DNI</h1>
         <p className="subtitle">Búsqueda por número de RUC</p>
 

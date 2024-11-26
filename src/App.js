@@ -3,9 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Registro from "./components/Registro";
 import Inicio from "./components/Inicio";
-
-
-import Documentacion from "./components/Documentacion";
+import Documentacion from "./components/Documentacion-DNI";
 
 function App() {
   return (

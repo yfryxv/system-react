@@ -4,16 +4,15 @@ import "./../styles/Navbar.css";
 
 function Navbar() {
   return (
-    <div className="navbar">
-      <h1 className="navbar-title">SISTEMA</h1>
+    <header className="navbar">
+      <h1 className="navbar-title">API-CODECTA</h1>
       <nav className="navbar-links">
         <Link to="/">Inicio</Link>
         <Link to="/registro">Registro</Link>
         <Link to="/documentacion">Documentación</Link>
       </nav>
-    </div>
+    </header>
   );
 }
 
 export default Navbar;
-

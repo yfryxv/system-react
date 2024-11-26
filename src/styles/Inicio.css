@@ -1,14 +1,93 @@
-.inicio {
+/* General Container */
+.container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    background-color: #334a7d;
+    color: white;
+    width: 20%;
     padding: 20px;
-    text-align: center;
   }
   
-  .inicio a {
-    color: #3498db;
-    text-decoration: underline;
+  .sidebar-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
   }
   
-  .inicio a:hover {
-    color: #2980b9;
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
   
+  .nav-list li {
+    margin: 15px 0;
+    cursor: pointer;
+  }
+  
+  /* Main Content */
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .header h2 {
+    color: #334a7d;
+  }
+  
+  .body {
+    margin-top: 20px;
+  }
+  
+  .alert-box {
+    background-color: #eef3fb;
+    border: 1px solid #cdd9e5;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .file-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .file-icon {
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  
+  .token {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .next-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .next-button:hover {
+    background-color: #45a049;
+  }
+  
+  .update-message {
+    margin-bottom: 10px;
+  }
+  
+  .update-info {
+    color: gray;
+    font-size: 0.9rem;
+  }
