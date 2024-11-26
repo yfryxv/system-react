@@ -1,11 +1,14 @@
 import "./../styles/Documentacion.css";
+
 export default function ApiDocumentation() {
   return (
     <div className="app-container">
       {/* Sidebar */}
       <nav className="sidebar">
         <div className="sidebar-content">
-          <br /><br /><br />
+          <br />
+          <br />
+          <br />
           <div className="logo">DOCUMENTACION</div>
           <ul className="nav-list">
             <li>INICIO</li>
@@ -94,25 +97,31 @@ export default function ApiDocumentation() {
         <section>
           <h2>JSON</h2>
           <pre className="json-container">
-            {JSON.stringify({
-              "data": {
-                "direccion": "JR. ANDAHUAYLAS NRO. 100 INT. 201 URB. BARRIOS ALTOS",
-                "direccion_completa": "JR. ANDAHUAYLAS NRO. 100 INT. 201 URB. BARRIOS ALTOS - LIMA LIMA",
-                "ruc": "20000000000",
-                "nombre_o_razon_social": "EMPRESA DEMO",
-                "estado": "ACTIVO",
-                "condicion": "HABIDO",
-                "departamento": "LIMA",
-                "provincia": "LIMA",
-                "distrito": "MAGDALENA DEL MAR",
-                "ubigeo_sunat": "150101"
-              }
-            }, null, 2)}
+            {JSON.stringify(
+              {
+                data: {
+                  direccion: "JR. ANDAHUAYLAS NRO. 100 INT. 201 URB. BARRIOS ALTOS",
+                  direccion_completa:
+                    "JR. ANDAHUAYLAS NRO. 100 INT. 201 URB. BARRIOS ALTOS - LIMA LIMA",
+                  ruc: "20000000000",
+                  nombre_o_razon_social: "EMPRESA DEMO",
+                  estado: "ACTIVO",
+                  condicion: "HABIDO",
+                  departamento: "LIMA",
+                  provincia: "LIMA",
+                  distrito: "MAGDALENA DEL MAR",
+                  ubigeo_sunat: "150101",
+                },
+              },
+              null,
+              2
+            )}
           </pre>
         </section>
+        
       </main>
-      <footer className="footer">
-      </footer>
+
+      
     </div>
-  )
+  );
 }
