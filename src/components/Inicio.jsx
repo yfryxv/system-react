@@ -1,12 +1,11 @@
 import React from "react";
 import "./../styles/Inicio.css";
-// Si esta es otra hoja de estilo, asegúrate de incluirla correctamente
-
 const Inicio = () => {
   return (
     <div className="container">
       {/* Sidebar */}
       <aside className="sidebar">
+        <br /><br /><br />
         <h3 className="sidebar-title">INICIO</h3>
         <nav>
           <ul className="nav-list">
@@ -16,7 +15,6 @@ const Inicio = () => {
           </ul>
         </nav>
       </aside>
-      
       {/* Main Content */}
       <main className="content">
         <div className="header">
@@ -47,5 +45,4 @@ const Inicio = () => {
     </div>
   );
 };
-
 export default Inicio;

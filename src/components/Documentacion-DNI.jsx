@@ -1,34 +1,19 @@
 import "./../styles/Documentacion.css";
+import { Link } from "react-router-dom";
 
 export default function ApiDocumentation() {
   return (
     <div className="app-container">
       {/* Sidebar */}
       <nav className="sidebar">
-        <div className="sidebar-content">
-          <br />
-          <br />
-          <br />
-          <div className="logo">DOCUMENTACION</div>
-          <ul className="nav-list">
-            <li>INICIO</li>
-            <li>PANEL</li>
-            <li>TOKEN</li>
-            <li className="active">
-              <div className="nav-item-with-dropdown">
-                <span>DOCUMENTACIÓN</span>
-                <span>▼</span>
-              </div>
-              <ul className="sub-nav-list">
-                <li>TIPO-CAMBIO</li>
-                <li>consulta DNI</li>
-                <li>consulta RUC</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+        <ul className="sub-nav-list">
+          <br /><br /><br />
+          <h2>Documentacion</h2>
+        <li> <Link to="/documentacion/tipo-cambio">TIPO-CAMBIO</Link></li>
+        <li><Link to="/documentacion/dni">consulta DNI</Link></li>
+        <li><Link to="/documentacion/ruc">consulta RUC</Link></li>
+        </ul>
       </nav>
-
       {/* Main Content */}
       <main className="main-content">
         <br />
@@ -118,10 +103,7 @@ export default function ApiDocumentation() {
             )}
           </pre>
         </section>
-        
       </main>
-
-      
     </div>
   );
 }
