@@ -14,7 +14,6 @@ const Inicio = () => {
       {/* Sidebar */}
       <nav className="sidebar">
         <div className="sidebar-content">
-          <br /><br /> <br /> <br />
           <div className="logo">DOCUMENTACIÓN</div>
           <ul className="nav-list">
             <li>
