@@ -1,28 +1,107 @@
-import React from "react";
+import React, { useState } from 'react';
+import "./../styles/Registro.css";
 
-function ApiCard({ title, description, headers, body }) {
+export default function AuthForm() {
+  const [activeTab, setActiveTab] = useState('login');
+  const [showPassword, setShowPassword] = useState({
+    current: false,
+    new: false,
+    confirm: false
+  });
+
+  // Función para alternar la visibilidad de la contraseña
+  const togglePasswordVisibility = (field) => {
+    setShowPassword(prevState => ({
+      ...prevState,
+      [field]: !prevState[field]
+    }));
+  };
+
+  const toggleTab = (tab) => {
+    setActiveTab(tab);
+  };
+
   return (
-    <div className="api-card">
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <h4>Headers</h4>
-      <ul>
-        {headers.map((header, index) => (
-          <li key={index}>
-            {header.name} - {header.type}: {header.description}
-          </li>
-        ))}
-      </ul>
-      <h4>Body</h4>
-      <ul>
-        {body.map((param, index) => (
-          <li key={index}>
-            {param.name} - {param.type}: {param.description}
-          </li>
-        ))}
-      </ul>
+    <div className="auth-container">
+      <div className="auth-form">
+        <div className="tabs">
+          <button 
+            className={`tab ${activeTab === 'login' ? 'active' : ''}`} 
+            onClick={() => toggleTab('login')}
+          >
+            Inicio de Sesión
+          </button>
+
+          <button 
+            className={`tab ${activeTab === 'register' ? 'active' : ''}`} 
+            onClick={() => toggleTab('register')}
+          >
+            Registro
+          </button>
+        </div>
+
+        <div className="form-container">
+          {activeTab === 'login' && (
+            <form className="form">
+              <h2>Iniciar Sesión</h2>
+              <input type="email" placeholder="Correo electrónico" required />
+              <div className="password-container">
+                <input 
+                  type={showPassword.current ? "text" : "password"} 
+                  placeholder="Contraseña" 
+                  required 
+                />
+                <button 
+                  type="button" 
+                  className="show-password-btn"
+                  onClick={() => togglePasswordVisibility('current')}
+                >
+                  {showPassword.current ? "Ocultar" : "Mostrar"}
+                </button>
+              </div>
+              <button type="submit" className="submit-btn">Iniciar Sesión</button>
+            </form>
+          )}
+
+          {activeTab === 'register' && (
+            <form className="form">
+              <h2>Registro</h2>
+              <input type="text" placeholder="Nombre" required />
+              <input type="email" placeholder="Correo electrónico" required />
+              <div className="password-container">
+                <input 
+                  type={showPassword.new ? "text" : "password"} 
+                  placeholder="Contraseña" 
+                  required 
+                />
+                <button 
+                  type="button" 
+                  className="show-password-btn"
+                  onClick={() => togglePasswordVisibility('new')}
+                >
+                  {showPassword.new ? "Ocultar" : "Mostrar"}
+                </button>
+              </div>
+              <div className="password-container">
+                <input 
+                  type={showPassword.confirm ? "text" : "password"} 
+                  placeholder="Confirmar Contraseña" 
+                  required 
+                />
+                <button 
+                  type="button" 
+                  className="show-password-btn"
+                  onClick={() => togglePasswordVisibility('confirm')}
+                >
+                  {showPassword.confirm ? "Ocultar" : "Mostrar"}
+                </button>
+              </div>
+              <button type="submit" className="submit-btn">Registrarse</button>
+            </form>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
-
-export default ApiCard;
+// mensaje para commit

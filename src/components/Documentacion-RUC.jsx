@@ -7,7 +7,7 @@ export default function ApiDocumentationRUC() {
       {/* Sidebar */}
       <nav className="sidebar">
         <div className="sidebar-content">
-          <div className="logo">DOCUMENTACION</div>
+          <div className="logo">DOCUMENTACIÓN</div>
           <ul className="nav-list">
             <li>
               <Link to="/">INICIO</Link>
@@ -21,7 +21,7 @@ export default function ApiDocumentationRUC() {
             <li className="active">
               <div className="nav-item-with-dropdown">
                 <span>DOCUMENTACIÓN</span>
-                <span>▼</span>  
+                <span>▼</span>
               </div>
               <ul className="sub-nav-list">
                 <li>
@@ -95,7 +95,7 @@ export default function ApiDocumentationRUC() {
               </thead>
               <tbody>
                 <tr>
-                  <td>dni</td>
+                  <td>ruc</td>
                   <td>string</td>
                   <td>11 dígitos</td>
                 </tr>

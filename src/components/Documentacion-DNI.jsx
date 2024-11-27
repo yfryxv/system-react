@@ -8,6 +8,7 @@ export default function ApiDocumentation() {
       <nav className="sidebar">
         <div className="sidebar-content">
           <div className="logo">DOCUMENTACIÓN</div>
+          <button className="sidebar-toggle">☰</button> {/* Botón de menú para móvil */}
           <ul className="nav-list">
             <li>
               <Link to="/">INICIO</Link>
