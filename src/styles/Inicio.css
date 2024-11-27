@@ -12,7 +12,8 @@
     background-color: #334a7d;
     color: white;
     width: 20%;
-    padding: 20px;
+    padding: 0;
+    margin-top: 76px;
   }
   
   .sidebar-title {
@@ -90,4 +91,18 @@
   .update-info {
     color: gray;
     font-size: 0.9rem;
+  }
+
+  footer{
+    top: 902px;
+    left: 0px;
+    right: 0px;
+    align-content: center;
+    position: fixed;
+    background-color: #2f4655;
+    color: #f8f8f8;
+  }
+  
+  .footer p{
+    align-content: center;
   }

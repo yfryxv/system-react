@@ -69,13 +69,19 @@
 }
 
 .main-content {
-  flex: 1;
-  padding: 2rem;
-  background-color: #f7fafc;
+  margin-top: 60px;
+  margin-bottom: 37px;
+  margin-left: -16px;
+  margin-right: -200px;
+  background-color: rgb(189, 223, 231);
+  display: flexbox;
+  padding-left: 20px;
+  padding-bottom: 2px;
+  padding-right: 556px;
 }
 
 h1 {
-  font-size: 1.875rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -97,6 +103,7 @@ h2 {
 
 .table-container {
   overflow-x: auto;
+  border-radius: 10px;
 }
 
 table {

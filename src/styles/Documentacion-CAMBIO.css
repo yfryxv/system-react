@@ -11,19 +11,19 @@
     color: white;
     overflow-y: auto; /* Añade scroll si hay mucho contenido */
     position: fixed; /* Mantiene el sidebar fijo */
-    top: 0; /* Alineado al borde superior */
+    top: 12px; /* Alineado al borde superior */
     left: 0; /* Alineado al borde izquierdo */
   }
   
   .sidebar-content {
-    padding: 1rem;
+    padding: 0;
   }
   
   /* Content area styles */
   .content {
     margin-left: 16rem; /* Espacio igual al ancho del sidebar */
     width: calc(100% - 16rem); /* Ajusta el contenido restante al ancho disponible */
-    padding: 1rem;
+    padding: 0;
   }
   
 .logo {
