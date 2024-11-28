@@ -4,6 +4,18 @@
   flex-direction: row;
   min-height: 100vh;
 }
+.nav-item-with-dropdown {
+  color: white; /* Cambia el color del texto a blanco */
+}
+
+body {
+  color: #ffffff; /* Cambia el color del texto a negro */
+  background-color: #fff; /* Asegúrate de que el fondo sea blanco */
+}
+
+h1, h2, h3, h4, h5, h6, p, td, th, a {
+  color: #000000; /* Aplica el color negro a los textos específicos */
+}
 
 /* Estilos de la barra lateral */
 .sidebar {
