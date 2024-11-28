@@ -1,14 +1,23 @@
+import React, { useState } from "react";
 import "./../styles/Documentacion.css";
 import { Link } from "react-router-dom";
 
 export default function ApiDocumentation() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="app-container">
       {/* Sidebar */}
-      <nav className="sidebar">
+      <nav className={`sidebar ${menuOpen ? "active" : ""}`}>
         <div className="sidebar-content">
           <div className="logo">DOCUMENTACIÓN</div>
-          <button className="sidebar-toggle">☰</button> {/* Botón de menú para móvil */}
+          <button className="sidebar-toggle" onClick={toggleMenu}>
+            ☰
+          </button>
           <ul className="nav-list">
             <li>
               <Link to="/">INICIO</Link>

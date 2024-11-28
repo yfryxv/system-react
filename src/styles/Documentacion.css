@@ -1,161 +1,164 @@
+/* Contenedor principal */
+.app-container {
+  display: flex; /* Cambiado a flexbox para mejor manejo del layout */
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* Estilos de la barra lateral */
+.sidebar {
+  width: 16rem;
+  background-color: #2c3e50;
+  color: white;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%; /* Se asegura de que la barra lateral ocupe todo el alto */
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0);
+}
+
+.sidebar.active {
+  transform: translateX(-100%); /* Oculta la barra lateral cuando no está activa */
+}
+
+.sidebar-content {
+  padding: 1rem;
+}
+
+.sidebar-toggle {
+  display: none; /* Botón del menú oculto por defecto */
+}
+
+/* Navegación */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 10px 0;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+  color: #00bcd4;
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1; /* Se ajusta automáticamente al espacio disponible */
+  margin-left: 16rem; /* Deja espacio para la barra lateral */
+  padding: 2rem;
+  background-color: #f7fafc;
+}
+
+h1 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.json-container {
+  background-color: #1a202c;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  overflow-x: auto;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
   .app-container {
-    display: grid;
-    min-height: 100vh;
-  }
-  .sidebar-content {
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
   }
 
-  /* Lista de navegación */
-  .nav-list {
-    list-style: none; /* Quitar viñetas */
-    padding: 0;
-    margin: 0;
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    transform: translateX(0);
   }
 
-  /* Títulos en la barra lateral */
-  .sidebar h2 {
-    color: white;
-    font-size: 20px;
-    margin-bottom: 20px;
+  .sidebar-content {
+    display: none; /* Ocultar contenido del menú lateral por defecto */
   }
 
-  /* Estilo de los enlaces */
-  .nav-list li {
-    margin: 10px 0; /* Espaciado entre elementos */
+  .sidebar.active .sidebar-content {
+    display: block; /* Mostrar el menú lateral cuando esté activo */
   }
 
-  .nav-list li a {
-    color: white; /* Texto blanco */
-    text-decoration: none; /* Quitar subrayado */
-    font-size: 16px;
-    transition: color 0.3s ease; /* Animación al pasar el mouse */
-  }
-
-  /* Cambio de color al pasar el mouse */
-  .nav-list li a:hover {
-    color: #00bcd4; /* Cambiar a un color azul claro */
-  }
-    /* Sidebar styles */
-    .sidebar {
-      width: 16rem; /* Fijo a 16rem */
-      height: 100vh; /* Ocupa toda la altura de la ventana */
-      background-color: #2c3e50;
-      color: white;
-      overflow-y: auto; /* Añade scroll si hay mucho contenido */
-      position: fixed; /* Mantiene el sidebar fijo */
-      top: 0; /* Alineado al borde superior */
-      left: 0; /* Alineado al borde izquierdo */
-    }
-    
-    .sidebar-content {
-      padding: 1rem;
-    }
-    
-    /* Content area styles */
-    .content {
-      margin-left: 16rem; /* Espacio igual al ancho del sidebar */
-      width: calc(100% - 16rem); /* Ajusta el contenido restante al ancho disponible */
-      padding: 1rem;
-    }
-    
-  .logo {
+  .sidebar-toggle {
+    display: block; /* Mostrar botón del menú lateral */
+    background: none;
+    border: none;
     font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-  }
-
-  .nav-list {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .nav-list > li {
-    padding: 0.5rem;
-    cursor: pointer;
-  }
-
-  .nav-list > li:hover:not(.active) {
-    background-color: #34495e;
-  }
-
-  .nav-item-with-dropdown {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .sub-nav-list {
-    list-style-type: none;
-    padding-left: 1rem;
-    margin-top: 0.5rem;
-  }
-
-  .sub-nav-list li {
-    color: #a0aec0;
-    margin-bottom: 0.5rem;
-    cursor: pointer;
-  }
-
-  .sub-nav-list li:hover {
     color: white;
+    cursor: pointer;
+    margin-bottom: 1rem;
   }
 
   .main-content {
-    flex: 1;
-    padding: 2rem;
-    background-color: #f7fafc;
+    margin-left: 0;
+    padding: 1rem;
   }
 
   h1 {
-    font-size: 1.875rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-
-  .subtitle {
-    color: #4a5568;
-    margin-bottom: 2rem;
-  }
-
-  section {
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
   }
 
   h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    font-size: 1.125rem;
   }
-
-  .table-container {
-    overflow-x: auto;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  }
-
-  th, td {
-    border: 1px solid #e2e8f0;
-    padding: 0.75rem;
-    text-align: left;
-  }
-
-  thead {
-    background-color: #f8fafc;
-  }
-
   .json-container {
     background-color: #1a202c;
     color: white;
     padding: 1rem;
     border-radius: 0.375rem;
-    overflow-x: auto;
-    white-space: pre-wrap;
+    overflow-x: auto; /* Esto sigue permitiendo el scroll horizontal */
+    white-space: pre-wrap; /* Mantiene los saltos de línea en el texto JSON */
+    word-wrap: break-word; /* Hace que las palabras largas (como el JSON) salten de línea */
+    overflow-wrap: break-word; /* Garantiza el ajuste de líneas */
   }
+  
+}
