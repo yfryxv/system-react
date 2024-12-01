@@ -22,7 +22,7 @@ export default function AuthForm() {
   };
 
   return (
-    <div className="auth-container">
+    
       <div className="auth-form">
         <div className="tabs">
           <button 
@@ -100,8 +100,8 @@ export default function AuthForm() {
             </form>
           )}
         </div>
-      </div>
     </div>
+    
   );
 }
 // mensaje para commit

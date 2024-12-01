@@ -11,7 +11,7 @@ function App() {
       <div className="app-container">
         <Navbar />
         <div className="content">
-          <Routes>
+          <Routes> 
             <Route path="/registro" element={<Registro />} /> 
             <Route path="/" element={<Inicio />} />
             <Route path="/documentacion" element={<Documentacion />} />
@@ -21,5 +21,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

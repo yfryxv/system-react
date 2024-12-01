@@ -1,4 +1,4 @@
-.auth-container {
+.app-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,9 @@
   background-color: #ffffff; /* Fondo blanco */
   padding: 1rem;
 }
-
+div.content {
+  margin: 0;
+}
 .auth-form {
   width: 100%;
   max-width: 400px;
@@ -14,6 +16,7 @@
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #3182ce; /* Borde azul */
+  margin: auto auto;
 }
 
 .tabs {
