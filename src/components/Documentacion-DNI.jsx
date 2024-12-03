@@ -1,18 +1,52 @@
+import React, { useState } from "react";
 import "./../styles/Documentacion.css";
 import { Link } from "react-router-dom";
 
 export default function ApiDocumentation() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="app-container">
       {/* Sidebar */}
-      <nav className="sidebar">
-        <ul className="sub-nav-list">
-          <br /><br /><br />
-          <h2>Documentacion</h2>
-        <li> <Link to="/documentacion/tipo-cambio">TIPO-CAMBIO</Link></li>
-        <li><Link to="/documentacion/dni">consulta DNI</Link></li>
-        <li><Link to="/documentacion/ruc">consulta RUC</Link></li>
-        </ul>
+      <nav className={`sidebar ${menuOpen ? "active" : ""}`}>
+        <div className="sidebar-content">
+          <div className="logo">DOCUMENTACIÓN</div>
+          <button className="sidebar-toggle" onClick={toggleMenu}>
+            ☰
+          </button>
+          <ul className="nav-list">
+            <li>
+              <Link to="/">INICIO</Link>
+            </li>
+            <li>
+              <Link to="/panel">otra pagina</Link>
+            </li>
+            <li>
+              <Link to="/token">otra pagina</Link>
+            </li>
+            <li className="active">
+              <div className="nav-item-with-dropdown">
+                <span>DOCUMENTACIÓN</span>
+                <span>▼</span>
+              </div>
+              <ul className="sub-nav-list">
+                <li>
+                  <Link to="/documentacion/tipo-cambio">Tipo-cambio</Link>
+                </li>
+                <li>
+                  <Link to="/documentacion/dni">Consulta DNI</Link>
+                </li>
+                <li>
+                  <Link to="/documentacion/ruc">Consulta RUC</Link>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </nav>
       {/* Main Content */}
       <main className="main-content">

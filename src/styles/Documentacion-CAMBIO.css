@@ -2,7 +2,43 @@
   display: grid;
   min-height: 100vh;
 }
-  
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Lista de navegación */
+.nav-list {
+  list-style: none; /* Quitar viñetas */
+  padding: 0;
+  margin: 0;
+}
+
+/* Títulos en la barra lateral */
+.sidebar h2 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilo de los enlaces */
+.nav-list li {
+  margin: 10px 0; /* Espaciado entre elementos */
+}
+
+.nav-list li a {
+  color: white; /* Texto blanco */
+  text-decoration: none; /* Quitar subrayado */
+  font-size: 16px;
+  transition: color 0.3s ease; /* Animación al pasar el mouse */
+}
+
+/* Cambio de color al pasar el mouse */
+.nav-list li a:hover {
+  color: #00bcd4; /* Cambiar a un color azul claro */
+}
   /* Sidebar styles */
   .sidebar {
     width: 16rem; /* Fijo a 16rem */
@@ -11,19 +47,19 @@
     color: white;
     overflow-y: auto; /* Añade scroll si hay mucho contenido */
     position: fixed; /* Mantiene el sidebar fijo */
-    top: 12px; /* Alineado al borde superior */
+    top: 0; /* Alineado al borde superior */
     left: 0; /* Alineado al borde izquierdo */
   }
   
   .sidebar-content {
-    padding: 0;
+    padding: 1rem;
   }
   
   /* Content area styles */
   .content {
     margin-left: 16rem; /* Espacio igual al ancho del sidebar */
     width: calc(100% - 16rem); /* Ajusta el contenido restante al ancho disponible */
-    padding: 0;
+    padding: 1rem;
   }
   
 .logo {
@@ -69,9 +105,9 @@
 }
 
 .main-content {
-  display: grid;
+  flex: 1;
   padding: 2rem;
-  background-color: #90b2f0;
+  background-color: #f7fafc;
 }
 
 h1 {
