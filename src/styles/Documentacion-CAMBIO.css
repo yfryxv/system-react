@@ -1,5 +1,5 @@
 .app-container {
-  display: flex;
+  display: grid;
   min-height: 100vh;
 }
   
@@ -69,9 +69,9 @@
 }
 
 .main-content {
-  flex: 1;
+  display: grid;
   padding: 2rem;
-  background-color: #f7fafc;
+  background-color: #90b2f0;
 }
 
 h1 {

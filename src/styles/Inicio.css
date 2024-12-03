@@ -1,6 +1,6 @@
 /* General Container */
 .container {
-    display: flex;
+    display: grid;
     height: 100vh;
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
@@ -94,13 +94,13 @@
   }
 
   footer{
-    top: 902px;
+    top: 885px;
     left: 0px;
     right: 0px;
     align-content: center;
     position: fixed;
     background-color: #2f4655;
-    color: #f8f8f8;
+    color: #ffffff;
   }
   
   .footer p{
