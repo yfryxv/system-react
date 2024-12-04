@@ -6,7 +6,10 @@
     background-color: #f8f8f8;
     color: #333;
   }
-  
+
+  main.content {
+    margin-top: 30px; 
+  }
   /* Sidebar */
   .sidebar {
     background-color: #334a7d;

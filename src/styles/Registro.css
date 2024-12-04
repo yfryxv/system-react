@@ -1,13 +1,10 @@
-.app-container {
+div.app-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: #ffffff; /* Fondo blanco */
   padding: 1rem;
-}
-div.content {
-  margin: 0;
 }
 .auth-form {
   width: 100%;
