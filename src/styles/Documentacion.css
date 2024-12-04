@@ -13,7 +13,7 @@ body {
   background-color: #fff; /* Asegúrate de que el fondo sea blanco */
 }
 
-h1, h2, h3, h4, h5, h6, p, td, th, a {
+h1, h2, h3, h4, h5, h6, p, td, th, a, li {
   color: #000000; /* Aplica el color negro a los textos específicos */
 }
 

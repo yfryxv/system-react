@@ -125,12 +125,7 @@ export default function ApiDocumentationRUC() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="footer-content">
-          <p>© 2024 Documentación API. Todos los derechos reservados.</p>
-        </div>
-      </footer>
+      
     </div>
   );
 }
